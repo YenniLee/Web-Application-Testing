@@ -32,16 +32,24 @@ const Dashboard = props => {
         }
     };
 
+    function clearScore() {
+        props.setBalls(0);
+        props.setStrikes(0);
+        props.setHit(0);
+        props.setFouls(0);
+    }
+
     return (
         <div className='dashboard'>
-            <button onClick={addBall}>Ball</button>
+            <button onClick={addBall} data-testid="ballBtn">Ball</button>
             <button onClick={addStrike}>Strike</button>
             <div className='hit-foul-container'>
-                <div className='hit-count'>Hit: {props.hit}</div>
+                <div className='count'>Hit: {props.hit}</div>
                 <button onClick={addHit}>Hit</button>
-                <div className='foul-count'>Foul: {props.fouls}</div>
+                <div className='count'>Foul: {props.fouls}</div>
                 <button onClick={addFoul}>Foul</button>
             </div>
+            <button onClick={clearScore}>Clear</button>
              
         </div>
     )

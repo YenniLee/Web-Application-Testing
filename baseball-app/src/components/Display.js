@@ -5,11 +5,11 @@ function Display({ balls, strikes }) {
         <div className='display'>
             <div className='balls'>
                 <h3>Balls</h3>
-                <div className='balls-count' data-testid="ballsValue">{balls}</div>
+                <div className='count' data-testid="ballsValue">{balls}</div>
             </div>
             <div className='strikes'>
                 <h3>Strikes</h3>
-                <div className='strikes-count' data-testid="strikesValue">{strikes}</div>
+                <div className='count' data-testid="strikesValue">{strikes}</div>
             </div>
         </div>
     )
