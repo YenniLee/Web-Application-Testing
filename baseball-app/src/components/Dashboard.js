@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Dashboard = props => {
-    // console.log(props)
     function addBall() {
         props.setBalls(props.balls + 1);
         if(props.balls === 4) {
